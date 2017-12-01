@@ -6,16 +6,14 @@ console.log("Задача 1:а-5, b-2, c-3. Площадь S=2(аb+bc+ac)=", 2*(
 let result = b > c ? b : c; 
 console.log("Узнать что больше: ширина или высота (высота c-3, ширина b-2). Результат = ", result);
 //Задача 2
-let x = 10;
+let x = 1000;
 let y = 15;
 let z = 25;
-let result2 = x * 100;
-let result3 = y * z;
-let result4 = result2 - result3;
+let result2 = x%(y*z);
+// let result3 = y * z;
+// let result4 = result2 - result3;
 
-console.log("Задача 2. Дано: Участок 10 соток, грядки: 15 на 25 м. 1 сотка = 100 м2. Переведём сотки в м2. Результат=", result2, "м2.");
-console.log("Вычислим площадь грядок:15м*25м=", result3, "м2.");
-console.log("Вопрос: Сколько м2 не занято грядками? Ответ:", result4, "м2.");
+console.log("Задача 2. Вопрос: Сколько м2 не занято грядками? Ответ:", result2, "м2.");
 //Задача 3
 
 let S1 = 15;

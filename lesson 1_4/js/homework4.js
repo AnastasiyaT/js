@@ -1,44 +1,30 @@
 (function () {
 	'use strict';
 	//1-ый способ создания объекта
-		var sity1 = {
+		var сity1 = {
 		name: 'St-Peterburg',
 		population: 5200000,
 		mayor: 'Poltavchenko',
-		addPopulation: function(x, y){
-			return y - 100 + x;
-		}
-		
+		addPopulation: function(city, popCount){//Метод = (свойство=функция)		
+			this.population += popCount;
+			city.population -= popCount;
+		},
 	};	
 
-	console.log("Мэр", sity1.mayor);
-	console.log("Город", sity1.name);
-	console.log("Население", sity1.population);	
+	console.log("Мэр", сity1.mayor);
+	console.log("Город", сity1.name);
+	console.log("Население", сity1.population);	
 
 	//2-ой способ создания объекта
+	var сity2 = {};
+		сity2.name = 'Yakutsk';
+		сity2.population = 307900;
+		сity2.mayor = 'Nikolaev';		
 
-	var sity2 = {};
-		sity2.name = 'Yakutsk';
-		sity2.population = 307900;
-		sity2.mayor = 'Nikolaev';		
-
-	console.log("Sity2. Мэр, город, население", sity2.mayor, sity2.name, sity2.population);
-		
-		
-	sity1.addPopulation(sity1.population, sity2.population);
-	console.log("вычитание", sity1.addPopulation);
-
+	console.log("сity2. Мэр, город, население", сity2.mayor, сity2.name, сity2.population);
 	
-
-
-	
-
-	//Метод = (свойство=функция), которая позволяет забирать какую-то часть населения у sity2и добавлять к sity1
-
-
-
-	
-
+	city1.addPopulation(city2, 100);
+	console.log("После переезда население city1 стало:", city1.population, "население cite2 стало:", city2.population);
 
 
 }());

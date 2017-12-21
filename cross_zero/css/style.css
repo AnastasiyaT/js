@@ -1,0 +1,44 @@
+.container{
+	background-color: aliceblue;
+	max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.login,
+.board-size,
+.enemy,
+.start {
+    text-align: center;    
+}
+
+.enemy,
+.board-size {
+    height: 100px;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 200px;
+}
+
+.game-container {
+    display: none;    
+    width:450px;
+    height:450px;
+    margin:0 auto;
+    position: relative;
+}
+.game-container .cell{
+    background-color: aliceblue;
+    border: 1px solid #cfcfcf;
+    cursor: pointer;
+    float: left;
+    font-size: 100px;
+    height: 148px;
+    text-align: center;
+    width: 148px;
+}
+

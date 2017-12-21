@@ -59,9 +59,72 @@ console.log('newArr', newArr);
 
 
 console.log("Задача 4")
+var x = [ 1, 1 ];
+var y = [ 1, 4 ];
+var z = [ 3, 1 ];
 
+//Найдём стороны тр-ка.  (X2-X1)²+(Y2-Y1)²
+ var xy = ((x[1]-x[0])*(x[1]-x[0]))+((y[1]-y[0])*(y[1]-y[0]));
+ var yz = ((y[1]-y[0])*(y[1]-y[0]))+((z[1]-z[0])*(z[1]-z[0]));
+ var zx = ((z[1]-z[0])*(z[1]-z[0]))+((x[1]-x[0])*(x[1]-x[0]));
+
+ console.log("Сторона XY равна", xy, "²");
+ console.log("Сторона YZ равна", yz, "²");
+ console.log("Сторона XZ равна", zx, "²");
+
+ if ((xy == yz + zx) || (yz == xy + zx) || (zx == xy + yz)) {
+ 	console.log("Треугольник является прямоугольным.");
+ } else {
+ 	console.log("Треугольник не является прямоугольным.");
+ };
 
 console.log("Задача 5")
+/*Создать массив из чисел. Выполнить сортировку 
+массива по возрастанию методом пузырька. 
+Запрещено использовать стандартные методы.*/
+
+// var arrNew = [1, 6, 9, 2];
+// console.log(arrNew);
+// var i, i2;
+// var sort;
+// for (i = arrNew.lenght - 1; i > 1; i--) {
+// 	sort = arrNew[i];
+
+// 	for (i2 = i; i2 > 1; i2--) {
+
+// 		if (sort < arrNew[i2-1]){
+// 			arrNew[i] = arrNew[i2-1];
+// 			arrNew[i2-1] = sort;
+// 			sort = arrNew[i];
+// 			}
+// 		}
+// 	}
+
+// console.log('Массив после сортировки', arrNew);
+
+
+    var arrNumber = [1, 6, 9, 2];
+    console.log(arrNumber);
+    var i, i2;
+    var sort;
+    for (i = arrNumber.length - 1; i > 1; i--) {
+        sort = arrNumber[i];
+
+        for (i2 = i; i2 > 1; i2--) {
+
+            if (sort < arrNumber[i2-1]) {
+                arrNumber[i] = arrNumber[i2-1];
+                arrNumber[i2-1] = sort;
+                sort = arrNumber[i];
+            }
+        }
+    }
+
+    console.log('Массив после сортировки', arrNumber);
+
+
+
+
 
 
 

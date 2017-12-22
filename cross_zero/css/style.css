@@ -1,4 +1,5 @@
 .container{
+
 	background-color: aliceblue;
 	max-width: 600px;
     margin: 0 auto;
@@ -25,20 +26,31 @@ input[type="text"] {
 }
 
 .game-container {
-    display: none;    
-    width:450px;
-    height:450px;
-    margin:0 auto;
+    display: none; 
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
     position: relative;
 }
-.game-container .cell{
-    background-color: aliceblue;
+
+.cell {
+    float: left;
+    background: aliceblue;
     border: 1px solid #cfcfcf;
     cursor: pointer;
-    float: left;
-    font-size: 100px;
     height: 148px;
-    text-align: center;
-    width: 148px;
+    width: 148px;  
 }
+/*
+.cell {
+    float: left;
+    background: aliceblue;
+    border: 1px solid #cfcfcf;
+    cursor: pointer;
+    height: 72px;
+    width: 72px;  
+}*/
+
+
+
 

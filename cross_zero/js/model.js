@@ -8,7 +8,7 @@ function Game() {
 function Player() {
 	this.name = name;
 	this.symb1 = X;
-	this.symb2 = 0;
+	this.symb2 = O;
 }
 
 function GameTable() {

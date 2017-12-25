@@ -33,24 +33,30 @@ input[type="text"] {
     position: relative;
 }
 
+#date {
+    text-align: center;
+    color: blue;   
+    width: 250px;
+}
+
 .cell {
     float: left;
-    background: aliceblue;
+    background: blue;
     border: 1px solid #cfcfcf;
     cursor: pointer;
     height: 148px;
     width: 148px;  
 }
-/*
-.cell {
+
+/*.cell {
     float: left;
-    background: aliceblue;
+    background: blue;
     border: 1px solid #cfcfcf;
     cursor: pointer;
     height: 72px;
     width: 72px;  
-}*/
-
+}
+*/
 
 
 

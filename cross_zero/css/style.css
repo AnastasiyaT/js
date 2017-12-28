@@ -1,5 +1,4 @@
-.container{
-
+.divContainer{
 	background-color: aliceblue;
 	max-width: 600px;
     margin: 0 auto;
@@ -7,6 +6,7 @@
 }
 
 .login,
+.login2,
 .board-size,
 .enemy,
 .start {
@@ -33,30 +33,24 @@ input[type="text"] {
     position: relative;
 }
 
-#date {
-    text-align: center;
-    color: blue;   
-    width: 250px;
-}
-
 .cell {
     float: left;
-    background: blue;
+    background: aliceblue;
     border: 1px solid #cfcfcf;
     cursor: pointer;
     height: 148px;
     width: 148px;  
 }
-
-/*.cell {
+/*
+.cell {
     float: left;
-    background: blue;
+    background: aliceblue;
     border: 1px solid #cfcfcf;
     cursor: pointer;
     height: 72px;
     width: 72px;  
-}
-*/
+}*/
+
 
 
 

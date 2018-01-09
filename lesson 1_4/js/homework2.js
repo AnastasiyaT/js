@@ -83,28 +83,8 @@ console.log("Задача 5")
 массива по возрастанию методом пузырька. 
 Запрещено использовать стандартные методы.*/
 
-// var arrNew = [1, 6, 9, 2];
-// console.log(arrNew);
-// var i, i2;
-// var sort;
-// for (i = arrNew.lenght - 1; i > 1; i--) {
-// 	sort = arrNew[i];
-
-// 	for (i2 = i; i2 > 1; i2--) {
-
-// 		if (sort < arrNew[i2-1]){
-// 			arrNew[i] = arrNew[i2-1];
-// 			arrNew[i2-1] = sort;
-// 			sort = arrNew[i];
-// 			}
-// 		}
-// 	}
-
-// console.log('Массив после сортировки', arrNew);
-
-
-    var arrNumber = [1, 6, 9, 2];
-    console.log(arrNumber);
+    var arrNumber = [1, 6, 9, 2, 5, 25, 3];
+    console.log("Массив", arrNumber);
     var i, i2;
     var sort;
     for (i = arrNumber.length - 1; i > 1; i--) {
@@ -119,12 +99,22 @@ console.log("Задача 5")
             }
         }
     }
-
     console.log('Массив после сортировки', arrNumber);
 
+console.log("Задача 5. Массив 2-й способ")
+    var newArray = [5, 0, 9, 25, 8, 12],
+    j, k, m, n = newArray.length;
 
+    console.log("Исходный массив", newArray);
+    console.log("Количество элементов в массиве: " + n);
 
-
-
-
-
+    for (j = 0; j < n ; j++){//повторяем  сортировку n раз 
+        for (m = 0; m < n - 1; m++){// сортировка
+            if (newArray[m] > newArray[m + 1]) {//сравниваем рядом стоящие элементы массива
+                k = newArray[m];//сохраняем в новую переменную если элемент больше
+                newArray[m] = newArray[m + 1];// меняем местами
+                newArray[m + 1] = k;
+            }
+        }
+    console.log("Новый массив " + newArray);
+    }

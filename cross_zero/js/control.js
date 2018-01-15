@@ -148,11 +148,26 @@ function drawField(){
 	}
 }
 //начало игры. кто ходит//<div class="game-container" id="field">
-startGame.addEventListener('click', drawSymb);
 
-function drawSymb (){
+let elemCell = document.getElementsByClassName('cell');
+console.log(elemCell);
+
+// elemCell.addEventListener('click', drawSymb);
+// console.log(elemCell);
+// function drawSymb(){
+// 	console.log("test");
+// }
+
+elemCell.onclick = function drawSymb(){
 	console.log("test");
 }
+
+
+
+
+
+
+
 
 
 

@@ -52,8 +52,8 @@ class Field {
    //       field_draw.appendChild(divX);
    //  }     
     addSymb(){
-        // console.log("this", div);
-        // div.innerHTML = "X";
+        console.log("this", div);
+        div.innerHTML = "X";
         if (game.move === game.player){
             div.innerHTML = game.player.symb;
             if (checkWin()) {

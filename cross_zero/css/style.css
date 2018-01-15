@@ -38,8 +38,8 @@ input[type="text"] {
     background: aliceblue;
     border: 1px solid #cfcfcf;
     cursor: pointer;
-    height: 148px;
-    width: 148px;  
+/*    height: 148px;
+    width: 148px;  */
 }
 /*
 .cell {

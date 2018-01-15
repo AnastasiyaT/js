@@ -23,9 +23,10 @@
 	let inputText = document.createTextNode('3 x 3');
 	label = document.createElement('label');
 	input = document.createElement('input');
-	input.setAttribute('id', 'size3');
+	input.setAttribute('id', 'size3');	
 	input.setAttribute('type', 'radio');
-	input.setAttribute('checked', true);
+	input.setAttribute('name', 'radio');
+	input.setAttribute('checked', true);	
 	div.appendChild(p);
 	div.appendChild(label);	
 	label.appendChild(input);
@@ -38,6 +39,7 @@
 	inputText = document.createTextNode('6 x 6');
 	input.setAttribute('id', 'size6');
 	input.setAttribute('type', 'radio');
+	input.setAttribute('name', 'radio');
 	div.appendChild(label);	
 	label.appendChild(input);
 	container.appendChild(div);
@@ -51,7 +53,7 @@
 	pText = document.createTextNode('Выбор противника');
 	label = document.createElement('label');
 	input = document.createElement('input');
-	input.setAttribute('name', 'radio-enemy1');
+	input.setAttribute('name', 'radio-enemy');
 	input.setAttribute('type', 'radio');
 	input.setAttribute('checked', true);
 
@@ -64,7 +66,7 @@
 
 	label = document.createElement('label');
 	input = document.createElement('input');
-	input.setAttribute('name', 'radio-enemy2');
+	input.setAttribute('name', 'radio-enemy');
 	input.setAttribute('type', 'radio');
 	inputText = document.createTextNode('Играть против компьютера');
 	div.appendChild(label);
@@ -118,6 +120,43 @@ startGame.addEventListener('click', getShowGameContainer);
 function getShowGameContainer(){
 	gameContainer.style.display = 'block';
 }
+/*отрисовать поле 
+  <label><input id="size3" type="radio" checked>3 Х 3</label>
+  <label><input id="size6" type="radio">6 Х 6</label> 
+   3*3 height: 148px; width: 148px;      6*6    height: 72px; width: 72px; */ 
+let fieldGame = document.getElementById('field');  
+let fieldSize3 = document.getElementById('size3');
+let fieldSize6 = document.getElementById('size6');
+startGame.addEventListener('click', drawField);
+function drawField(){	
+	if(fieldSize6.checked){
+		for(let i = 0; i < 36; i++){
+			let div = document.createElement('div');		
+			div.classList.add('cell');
+			fieldGame.appendChild(div);	
+			div.style.height = 72 + "px";
+			div.style.width = 72 +"px";
+		}
+	} else {		
+		for(let i = 0; i < 9; i++){
+			let div = document.createElement('div');		
+			div.classList.add('cell');
+			fieldGame.appendChild(div);	
+			div.style.height = 148 + "px";
+			div.style.width = 148 +"px";
+		}		
+	}
+}
+//начало игры. кто ходит//<div class="game-container" id="field">
+startGame.addEventListener('click', drawSymb);
+
+function drawSymb (){
+	console.log("test");
+}
+
+
+
+
 
 
 
